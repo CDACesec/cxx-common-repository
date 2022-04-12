@@ -85,7 +85,7 @@ echo --------------------
 
 
 git clone https://github.com/CDACesec/remill.git
-cd ~/remill
+cd remill
 git checkout -b temp ${REMILL_VERSION}
 
 
@@ -96,7 +96,7 @@ echo Moving the mcsema into the remill-build/tools
 echo --------------------
 
 
-mv -f ../mcsema ~/remill/tools
+mv -f ../mcsema tools/
 
 echo --------------------
 echo Building Mcsema
@@ -105,14 +105,14 @@ echo --------------------
 # Build Mcsema
 
 ./scripts/build.sh
-cd ~/remill/remill-build
+cd remill-build
 chmod +x ../tools/mcsema/tools/setup_launcher.sh
 sudo make install
 
 # Verifying that Mcsema is installed properly or not 
 
 echo --------------------
-echo Try execution mcsema cmds: mcsema-disass \& mc-sema-lift-4.0
+echo Try execution mcsema cmds: mcsema-disass \& mcsema-lift-4.0
 echo --------------------
 
  mcsema-disass
@@ -126,4 +126,4 @@ echo --------------------
 #  make test
 
 
-echo "Building finished, you may now run `circle.sh` to further check working of the installation";
+echo "Building finished, you may now run 'circle.sh' to further check working of the installation";
