@@ -1,11 +1,4 @@
 
-
-  # NAME : ANIL DHARMA BANDGAR 
-  # EMAIL-ID: anilb@cdac.in
-  # DATE : 12 SEPT 2019
-
-
-
  # Implementation of Shell Script to build LLVM
  
  # Implemented on Ubuntu 16.04
@@ -92,5 +85,5 @@
  
   echo -----------------
               
-                make
+                make -j `nproc`
 
