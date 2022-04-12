@@ -71,14 +71,6 @@ echo --------------------
 git clone https://github.com/CDACesec/mcsema.git
 export REMILL_VERSION=`cat ./mcsema/.remill_commit_id`
 
-if [[ $REMILL_VERSION != required_remill_cid ]]; then
-    # manually fix the correct commit hash for both
-    # mcsema and remill
-    export REMILL_VERSION=$required_remill_cid;
-    git checkout -b temp $required_mcsema_cid;
-fi
-
-
 echo --------------------
 echo \#2. Cloning the remill into pwd
 echo --------------------
@@ -86,8 +78,6 @@ echo --------------------
 
 git clone https://github.com/CDACesec/remill.git
 cd remill
-git checkout -b temp ${REMILL_VERSION}
-
 
 # Move the Mcsema repository inside remill/tools folder
 
