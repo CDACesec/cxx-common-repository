@@ -68,7 +68,7 @@ echo --------------------
 echo \#1. Cloning the Mcsema into pwd
 echo --------------------
     
-git clone git@github.com:CDACesec/mcsema.git
+git clone https://github.com/CDACesec/mcsema.git
 export REMILL_VERSION=`cat ./mcsema/.remill_commit_id`
 
 if [[ $REMILL_VERSION != required_remill_cid ]]; then
@@ -84,7 +84,7 @@ echo \#2. Cloning the remill into pwd
 echo --------------------
 
 
-git clone git@github.com:CDACesec/remill.git
+git clone https://github.com/CDACesec/remill.git
 cd ~/remill
 git checkout -b temp ${REMILL_VERSION}
 
